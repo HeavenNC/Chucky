@@ -1443,24 +1443,8 @@ def bot(op):
 	    	wait["Qr"] = False
 	    	nadya.sendText(msg.to,"Qr Protect Sudah Di Nonaktifkan")
 	     else:
-		    nadya.sendText(msg.to,"Khusus Monika")	    	
-
-        elif "Cancel on" in msg.text:
-		 if msg.from_ in Creator:
-		  if msg.from_ in admin:
-			 wait["Protectcancel"] = True
-			 nadya.sendText(msg.to,"Invite Cancel On")
-		  else:
-			 nadya.sendText(msg.to,"Khusus Monika")
+		    nadya.sendText(msg.to,"Khusus Monika")
 			 
-		elif "Cancel off" in msg.text:
-		 if msg.from_ in Creator:
-		  if msg.from_ in admin:
-			 wait["Protectcancel"] = False
-			 nadya.sendText(msg.to,"Invite Cancel Off")
-		  else:
-			 nadya.sendText(msg.to,"Khusus Monika")
-
 	    elif "Autokick on" in msg.text:
 	     if msg.from_ in admin:	 	        
 		     wait["AutoKick"] = True
