@@ -762,8 +762,7 @@ def bot(op):
                 pass
 
 
-
-				if op.type == 17:
+	if op.type == 17:
           if wait["Sambutan"] == True:
             if op.param2 in Creator:
                 return
