@@ -275,7 +275,6 @@ wait = {
     "Contact":False,
     "Sambutan":True,
     "inviteprotect":False,
-	"Protectcancel":False
     "alwaysRead":True,    
     "Sider":{},
     "Simi":{},    
@@ -762,18 +761,7 @@ def bot(op):
             else:
                 pass
 
-				
-		if op.type == 11:
-		 if wait["Protectcancel"] == True:
-			group = c1.getGroup(op.param1)
-			gMembMids = [contact.mid for contact in group.invite]
-		if op.param2 in Creator:
-		 if op.param2 in admin:
-		  if op.param2 in Bots:
-		   pass
-		else:
-				nadya.cancelGroupInvitation(op.param1, gMembMids)
-				nadya.sendtext(op.param1, "Mau Ngundang Siapa?\nSitu Bukan Admin\nJadi aku cancel")
+
 
 				if op.type == 17:
           if wait["Sambutan"] == True:
@@ -1426,24 +1414,7 @@ def bot(op):
                     nadya.sendText(msg.to,"Auto Respon Kick Sudah Off")
 		else:
 		    nadya.sendText(msg.to,"Khusus Monika")			  
-		    
- 
-	    elif msg.text in ["Autocancel on"]:
-	     if msg.from_ in admin:	        
-                wait["AutoCancel"] = True
-                nadya.sendText(msg.to,"Auto Cancel Sudah Aktif")
-		print wait["AutoCancel"]
-	     else:
-		    nadya.sendText(msg.to,"Khusus Monika")		
 
-	    elif msg.text in ["Autocancel off"]:
-	     if msg.from_ in admin:	        
-                wait["AutoCancel"] = False
-                nadya.sendText(msg.to,"Auto Cancel Sudah Di Nonaktifkan")
-		print wait["AutoCancel"]
-	     else:
-		    nadya.sendText(msg.to,"Khusus Monika")	
-		    
 
 	    elif msg.text in ["Invitepro on"]:
 	     if msg.from_ in admin:	        
